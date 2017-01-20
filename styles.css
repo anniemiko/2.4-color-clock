@@ -1,0 +1,22 @@
+body{
+  background-color: #2C8BAB;
+  color: #bbb;
+  font-family: fantasy;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-top: 250px;
+}
+
+.time{
+  font-size: 8vw;
+}
+
+.time #j-hours::after, .time #j-minutes::after{
+  content: ":";
+  padding-left: 20px;
+}
