@@ -35,8 +35,16 @@ function currentTime(){
   seconds.textContent = s;
 }
 
-// timebar.style.width = s.toString + "%";
+// timebar
 
+function move(){
+  var timebar = document.getElementById('j-timebar');
+  var time = new Date();
+  var s = time.getSeconds();
+  timebar.style.width = s + "%";
+}
+
+// calculate percentage
 // function percentage(){
 //   var percent = s/60;
 //   return percent;
@@ -45,8 +53,14 @@ function currentTime(){
 
 window.setInterval(currentTime, 1000);
 
-// var color = '#'+h+m+s;
-// document.body.style.background = color;
+// change color of background
+function backColor(){
+var time = new Date();
+var s = time.getSeconds();
+var color = '#'+'0D'+'4F'+s;
+document.body.style.background = color;
+}
+window.setInterval(backColor, 1000);
 
 
 

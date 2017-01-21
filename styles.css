@@ -10,6 +10,7 @@ h1{
   font-weight: bold;
   vertical-align: middle;
   margin-top: 250px;
+  margin-bottom: 0px;
 }
 
 .time{
@@ -20,3 +21,21 @@ h1{
   content: ":";
   padding-left: 20px;
 }
+
+.time-box{
+  position: relative;
+}
+
+#j-timebar{
+  position: absolute;
+  height: 2px;
+  background-color: #FFF;
+  width: 100%;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+/*from https://www.gradient-animator.com/*/
