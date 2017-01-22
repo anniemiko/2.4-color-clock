@@ -10,56 +10,45 @@ function currentTime(){
 
   var time = new Date();
 
-  var h = time.getHours();
-  var m = time.getMinutes();
-  var s = time.getSeconds();
+  var hr = time.getHours();
+  var min = time.getMinutes();
+  var sec = time.getSeconds();
 
-  if (h > 12){
-    h = h - 12;
+  if (hr > 12){
+    hr = hr - 12;
   }
 
-  if (h<10){
-    h = "0" + h;
+  if (hr<10){
+    hr = "0" + hr;
   }
 
-  if (m < 10){
-    m = "0" + m;
+  if (min < 10){
+    min = "0" + min;
   }
 
-  if (s < 10){
-    s = "0" + s;
+  if (sec < 10){
+    sec = "0" + sec;
   }
 
-  hours.textContent = h;
-  minutes.textContent = m;
-  seconds.textContent = s;
+  hours.textContent = hr;
+  minutes.textContent = min;
+  seconds.textContent = sec;
+
+  var percent = sec / 60 * 100;
+
+  document.getElementById('bar').style.width = percent + '%';
 }
-
-// timebar
-
-function move(){
-  var timebar = document.getElementById('j-timebar');
-  var time = new Date();
-  var s = time.getSeconds();
-  timebar.style.width = s + "%";
-}
-
-// calculate percentage
-// function percentage(){
-//   var percent = s/60;
-//   return percent;
-// }
-// console.log(percent)
 
 window.setInterval(currentTime, 1000);
 
 // change color of background
 function backColor(){
-var time = new Date();
-var s = time.getSeconds();
-var color = '#'+'0D'+'4F'+s;
-document.body.style.background = color;
+  var time = new Date();
+  var s = time.getSeconds();
+  var color = '#'+'0D'+'4F'+s;
+  document.body.style.background = color;
 }
+
 window.setInterval(backColor, 1000);
 
 
