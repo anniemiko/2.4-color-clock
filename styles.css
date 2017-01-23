@@ -1,5 +1,5 @@
 body{
-  background-color: #2C8BAB;
+  /*background-color: #2C8BAB;*/
   color: #bbb;
   font-family: fantasy;
   text-align: center;
@@ -38,6 +38,7 @@ h1{
   height: 100%;
   background-color: #FFF;
 }
+
 
 /*@keyframes AnimationName {
     0%{background-position:0% 50%}
